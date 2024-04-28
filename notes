@@ -1,0 +1,17 @@
+Installation
+If you prefer to manually download them, visit ffbinaries or zeranoe Windows builds.
+
+Windows (using choco)
+command: choco install ffmpeg -y
+
+location: C:\ProgramData\chocolatey\lib\ffmpeg\tools\ffmpeg\bin
+
+Mac OSX
+command: brew install ffmpeg mono-libgdiplus
+
+location: /usr/local/bin
+
+Ubuntu
+command: sudo apt-get install -y ffmpeg libgdiplus
+
+location: /usr/bin

@@ -18,8 +18,6 @@ public class VideoController
 
     [HttpPost]
     public async Task<IActionResult> UploadVideo(IFormFile videoFile)
-    {
-        /*
         string uploads = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
         string filePath = Path.Combine(uploads, videoFile.FileName);
         using (Stream fileStream = new FileStream(filePath, FileMode.Create))
@@ -38,7 +36,7 @@ public class VideoController
         string results = Path.Combine(Directory.GetCurrentDirectory(), "imgs");
         var resultImages = Directory.GetFiles(results, "test*.png").ToList();
         using var images = new MagickImageCollection( resultImages.Select(path=> new MagickImage(path)).ToArray() );
-        images.Evaluate(EvaluateOperator.Median).Write(results+"/median.jpg");
+        images.Evaluate(EvaluateOperator.Mean).Write(results+"/median.jpg");
         
         return new OkResult();
     }

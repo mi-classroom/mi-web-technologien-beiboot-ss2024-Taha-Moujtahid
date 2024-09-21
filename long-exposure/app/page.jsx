@@ -1,15 +1,16 @@
 "use client"
 
 import { getUserRole } from './functions';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 export default function Home() {
   
   const [role, setRole] = useState("anon");
 
-  useEffect(() => {
+  
+  useMemo(() => { //TODO check if this is the right way to use useMemo
     getUserRole().then((role) => setRole(role));
-  } , [role]);
+  }, [role]);
 
   return (<>
     {role === "user" ? (

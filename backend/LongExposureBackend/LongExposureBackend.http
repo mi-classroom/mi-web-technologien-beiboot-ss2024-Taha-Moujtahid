@@ -1,6 +1,0 @@
-@LongExposureBackend_HostAddress = http://localhost:5098
-
-GET {{LongExposureBackend_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

@@ -1,6 +1,0 @@
-﻿services:
-  longexposurebackend:
-    image: longexposurebackend
-    build:
-      context: .
-      dockerfile: backend/LongExposureBackend/Dockerfile
